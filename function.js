@@ -17,12 +17,12 @@ searchAPI.addEventListener("input", (e) => {
 
 const fetchJobs = async () => {
   let page = 1;
-  const resultsPerPage = 1000;
+  const resultsPerPage = 500;
 
-  while (usersMap.size < 1000) {
+  while (usersMap.size < 500) {
     // Desired number of results
     const response = await fetch(
-      `http://api.adzuna.com:80/v1/api/jobs/gb/search/${page}?app_id=85bcc4a9&app_key=a21bb18b33b8953eccad7e73810549c1&results_per_page=${resultsPerPage}&what=%20junior%20graduate&content-type=application/json`
+      `http://api.adzuna.com:80/v1/api/jobs/gb/search/${page}?app_id=85bcc4a9&app_key=7deaedc76d4bef0b821c3b584be2f74e&results_per_page=${resultsPerPage}&what=%20junior%20graduate&content-type=application/json`
     );
 
     const data = await response.json();
